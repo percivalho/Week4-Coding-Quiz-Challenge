@@ -8,7 +8,7 @@ var resultOutput = document.getElementById("result");
 var scoreOutput = document.getElementById("score");
 
 var currentQuestionIndex = 0;
-var timeLeft = 10;
+var timeLeft = 76;
 var score = 0;
 // make it global for stop the timer later
 var timeInterval;

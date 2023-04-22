@@ -52,6 +52,21 @@ h2 {
   font-size: 250%;
 }
 
+button{
+  background-color: #0074D9; /* blue color */
+  color: #fff; /* white text */
+  padding: 12px 24px; /* button padding */
+  border: none; /* remove button border */
+  border-radius: 4px; /* add button border radius */
+  font-size: 16px; /* button text size */  
+  margin: 2px;
+}
+
+button:hover{
+  background-color: #00509D; /* darker blue color on hover */
+}
+
+
 
 footer {
   display: flex;
