@@ -1,0 +1,62 @@
+/* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
+:root {
+  /* declare a variable with `--` syntax */
+  /*--dark: #13293d;*/
+  /*--dark: #1E3D59;*/
+  --dark: lightblue;
+  --light: #fff;
+  /*--navlink-color: #b9c6ae;*/
+  --navlink-color: #c0c0c0;
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;  
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 0 0rem;
+
+}
+
+section.question {
+  display: none;
+}
+
+section.finish {
+  display: none;
+}
+
+h2 {
+  font-size: 250%;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: var(--dark);
+  color: var(--light);
+}

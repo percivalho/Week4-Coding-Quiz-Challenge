@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Quiz Challenge</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <a href="#">View high scores</a>
+    <p>Time: <span id="timeleft"></span></p>
+  </header>
+
+  <main>
+    <!-- Start Quiz section -->
+    <section class="start">
+      <h2>Coding Quiz Challenge</h2>
+      <p>Try to answer the following code-related questions within the time limit.</p>
+      <p>Keep in mind that incorrect answers will penalise your score/time by ten seconds!</p>
+      <button id="startbutton">Start Quiz</button>
+    </section>
+
+    <!-- Question -->
+    <section class="question">
+      <h2 id="questiontitle"></h2>	   
+      <ul id="choices">
+        <li><button class="choice"></button></li>
+        <li><button class="choice"></button></li>
+        <li><button class="choice"></button></li>
+        <li><button class="choice"></button></li>      
+      </ul>
+      <p id="result"></p>
+      <br>
+    </section>
+
+    <!-- Finish -->
+    <section class="finish">
+      <h2>All done!</h2>
+      <p>Your final score is </p>
+      <div>
+        <p>Enter initials</p>
+        <input type="text" name="initial">
+        <button>Submit</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2023 Percival Ho</span>
+  </footer>
+
+  <script src="./assets/js/questions.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
