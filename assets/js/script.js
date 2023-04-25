@@ -6,12 +6,14 @@ var finishSection = document.querySelector(".finish");
 var questionTitle = document.getElementById("questiontitle");
 var resultOutput = document.getElementById("result");
 var scoreOutput = document.getElementById("score");
+var initialInput = document.getElementById("initial");
 
 var currentQuestionIndex = 0;
 var timeLeft = 76;
 var score = 0;
 // make it global for stop the timer later
 var timeInterval;
+var array = []; 
 
 function countdown() {
   
@@ -116,5 +118,18 @@ function endQuiz() {
     finishSection.setAttribute("style", "display:inline;");
 
 	// Add event listener to submit button
-	//document.getElementById("submit").addEventListener("click", submitScore);
+	document.getElementById("submit").addEventListener("click", submitScore);
+}
+
+function submitScore(){
+    var input = initialInput.value + " - " + score;
+    console.log(input)
+    var data = localStorage.getItem("scores");
+    if (data != null){
+        array = JSON.parse(data);
+    }
+    array.push(input);
+    console.log(array)
+    localStorage.setItem("scores", JSON.stringify(array));
+    initialInput.value = ""; // clear up the initial inputted
 }
