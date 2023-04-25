@@ -13,7 +13,7 @@ var timeLeft = 76;
 var score = 0;
 // make it global for stop the timer later
 var timeInterval;
-var array = []; 
+var array = [];  // for storing the high scores
 
 function countdown() {
   
@@ -28,8 +28,7 @@ function countdown() {
         timerEl.textContent = "0";
         // Stops execution of action at set interval
         clearInterval(timeInterval);
-        // Calls function to create and append image
-        //displayMessage();
+        // Calls function to end the quiz on times up
         endQuiz();
   
       }
@@ -46,14 +45,11 @@ function displayQuestion(){
 		choice.textContent = question.choices[i];
 		choice.addEventListener("click", handleChoice);
 	}    
-    //console.log(resultOutput)
-    //resultOutput.textContent = "                        ";
 
     // display the questions out
     startSection.setAttribute("style", "display:none;");
     questionSection.setAttribute("style", "display:inline;");
     finishSection.setAttribute("style", "display:none;");
-    //console.log(finish);
 
 }
 
@@ -86,7 +82,7 @@ function handleChoice(event) {
 		resultOutput.textContent = "Wrong!";
 	}
 
-	// Remove event listeners from choices
+	// Remove event listeners from choices buttons
 	var choices = document.getElementById("choices");
 	for (let i = 0; i < choices.children.length; i++) {
 		const choice = choices.children[i].querySelector(".choice");
@@ -99,7 +95,7 @@ function handleChoice(event) {
 		// Display next question
 		displayQuestion();
 	} else {
-		// Quiz is over
+		// Quiz is over no more questions
 		endQuiz();
 	}
 }
@@ -121,6 +117,7 @@ function endQuiz() {
 	document.getElementById("submit").addEventListener("click", submitScore);
 }
 
+// submit the score to local storage
 function submitScore(){
     var input = initialInput.value + " - " + score;
     console.log(input)
@@ -129,7 +126,7 @@ function submitScore(){
         array = JSON.parse(data);
     }
     array.push(input);
-    console.log(array)
+    //console.log(array)
     localStorage.setItem("scores", JSON.stringify(array));
     initialInput.value = ""; // clear up the initial inputted
 }
