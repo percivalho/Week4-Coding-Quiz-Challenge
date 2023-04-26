@@ -106,10 +106,10 @@ Testing done on:
 ## Resources
 
 Link to Deployed Website:
-https://percivalho.github.io/Week3-Password-Generator/
+https://percivalho.github.io/Week4-Coding-Quiz-Challenge/
 
 Link to GitHub repo:
-https://github.com/percivalho/Week3-Password-Generator.git
+https://github.com/percivalho/Week4-Coding-Quiz-Challenge.git
 
 
 ## License 

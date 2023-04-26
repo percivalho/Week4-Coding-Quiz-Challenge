@@ -78,7 +78,7 @@ function handleChoice(event) {
 		resultOutput.textContent = "Correct!";
 	} else {
 		// Subtract time and display feedback
-		timeLeft -= 5;
+		timeLeft -= 10;
 		resultOutput.textContent = "Wrong!";
 	}
 
@@ -98,6 +98,11 @@ function handleChoice(event) {
 		// Quiz is over no more questions
 		endQuiz();
 	}
+
+    if (timeLeft <= 0){
+        endQuiz();            
+    }
+
 }
 
 // Function to end the quiz
