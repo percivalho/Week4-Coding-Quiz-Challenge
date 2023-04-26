@@ -100,6 +100,7 @@ function handleChoice(event) {
 	}
 
     if (timeLeft <= 0){
+        timerEl.textContent = "0";        
         endQuiz();            
     }
 
