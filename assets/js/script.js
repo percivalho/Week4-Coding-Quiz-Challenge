@@ -95,7 +95,7 @@ function handleChoice(event) {
 		// Display next question
 		displayQuestion();
 	} else {
-		// Quiz is over no more questions
+        // Quiz is over no more questions
 		endQuiz();
 	}
 
