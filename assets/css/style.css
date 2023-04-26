@@ -48,6 +48,9 @@ section.finish {
   display: none;
 }
 
+ul {
+  margin-bottom: 2%;
+}
 h2 {
   font-size: 250%;
 }
